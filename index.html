@@ -57,20 +57,101 @@
         .progress-bg { background: #dfe6e9; border-radius: 10px; height: 8px; width: 100%; overflow: hidden; margin-top: 12px; }
         .progress-bar { background: linear-gradient(90deg, var(--secondary), var(--primary)); height: 100%; width: 0%; transition: 0.5s ease-out; }
         
-        /* লিডারবোর্ড মুকুট সিস্টেম */
-        .podium { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin: 30px 0 40px; padding: 0 10px; }
-        .podium-item { text-align: center; position: relative; width: 33%; }
-        .rank-1 { order: 2; transform: scale(1.1); z-index: 2; margin-bottom: 10px; } .rank-1 img { border-color: var(--gold); box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); } .rank-1 .crown { color: var(--gold); top: -35px; font-size: 2rem; }
-        .rank-2 { order: 1; } .rank-2 img { border-color: var(--silver); } .rank-2 .crown { color: var(--silver); }
-        .rank-3 { order: 3; } .rank-3 img { border-color: var(--bronze); } .rank-3 .crown { color: var(--bronze); }
-        .podium-img { width: 60px; height: 60px; border-radius: 50%; border: 3px solid white; object-fit: cover; background: #fff; }
-        .crown { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 1.4rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
-        .podium-name { font-size: 0.8rem; font-weight: 700; margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
-        .podium-score { font-size: 0.75rem; color: white; font-weight: 700; background: var(--primary); padding: 2px 10px; border-radius: 10px; display: inline-block; margin-top: 2px; }
-        .lb-list { background: var(--surface); border-radius: 20px; padding: 5px 15px; }
-        .lb-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f2f6; } .lb-item:last-child { border-bottom: none; }
-        .lb-rank { font-weight: 800; width: 30px; color: #b2bec3; font-size: 1rem; } .lb-img { width: 38px; height: 38px; border-radius: 50%; margin-right: 15px; object-fit: cover; }
-        .lb-name { font-weight: 600; font-size: 0.95rem; flex: 1; } .lb-val { font-weight: 700; color: var(--primary); }
+        /* লিডারবোর্ড মুকুট সিস্টেম - ঠিক করা হয়েছে */
+        .podium {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            margin: 30px 0 40px;
+            padding: 0 15px;
+        }
+        .podium-item {
+            text-align: center;
+            position: relative;
+            flex: 1;
+        }
+        .rank-1 { order: 2; transform: scale(1.1); margin-bottom: 5px; }
+        .rank-1 .podium-img { border: 3px solid var(--gold); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+        .rank-1 .crown { color: var(--gold); top: -35px; font-size: 2rem; }
+        
+        .rank-2 { order: 1; }
+        .rank-2 .podium-img { border: 3px solid var(--silver); }
+        .rank-2 .crown { color: var(--silver); top: -30px; font-size: 1.8rem; }
+        
+        .rank-3 { order: 3; }
+        .rank-3 .podium-img { border: 3px solid var(--bronze); }
+        .rank-3 .crown { color: var(--bronze); top: -30px; font-size: 1.8rem; }
+        
+        .podium-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #fff;
+        }
+        .crown {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        .podium-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+        .podium-score {
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: var(--primary);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .lb-list {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 5px 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .lb-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f2f6;
+        }
+        .lb-item:last-child { border-bottom: none; }
+        .lb-rank {
+            font-weight: 800;
+            width: 35px;
+            color: #b2bec3;
+            font-size: 1rem;
+        }
+        .lb-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        .lb-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+        .lb-val {
+            font-weight: 700;
+            color: var(--primary);
+        }
         
         .box { background: var(--surface); padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
         .input-wrap { position: relative; margin-bottom: 15px; } .input-wrap i { position: absolute; top: 50%; transform: translateY(-50%); left: 15px; color: var(--primary); }
@@ -91,6 +172,7 @@
         .toast.show { opacity: 1; top: 50px; }
         #notice-board { display: none; background: rgba(255, 195, 18, 0.15); border: 1px solid var(--secondary); color: var(--text); padding: 12px 15px; margin: 0 20px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
         #notice-board i { color: var(--secondary); animation: pulse 1s infinite; margin-right: 10px; font-size: 1.2rem; }
+        .no-data { text-align: center; color: #95a5a6; padding: 20px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -161,7 +243,6 @@
     <div id="p-profile" class="page">
         <div class="sec-head"><i class="fas fa-hand-holding-usd"></i> সালামি নিন 🤲</div>
         <div class="box">
-            <!-- উইথড্র করার জন্য রেফারের টার্গেট নোটিশ -->
             <p id="w-req-msg" style="font-size: 0.85rem; color: var(--danger); font-weight: 700; text-align: center; margin-bottom: 12px; background: rgba(255,71,87,0.1); padding: 8px; border-radius: 10px; display: none;"></p>
             
             <div class="input-wrap"><i class="fas fa-university"></i>
@@ -191,14 +272,14 @@
 <script>
     const firebaseConfig = {
         apiKey: "AIzaSyDMdzu-9zZjfM8A9VuaiBmREeLzPa9_kr8",
-  authDomain: "tupupp-80860.firebaseapp.com",
-  databaseURL: "https://tupupp-80860-default-rtdb.firebaseio.com",
-  projectId: "tupupp-80860",
-  storageBucket: "tupupp-80860.firebasestorage.app",
-  messagingSenderId: "617315490972",
-  appId: "1:617315490972:web:e1c904a66da70a839e6159",
-  measurementId: "G-V09NNQNCRQ"
-};
+        authDomain: "tupupp-80860.firebaseapp.com",
+        databaseURL: "https://tupupp-80860-default-rtdb.firebaseio.com",
+        projectId: "tupupp-80860",
+        storageBucket: "tupupp-80860.firebasestorage.app",
+        messagingSenderId: "617315490972",
+        appId: "1:617315490972:web:e1c904a66da70a839e6159",
+        measurementId: "G-V09NNQNCRQ"
+    };
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
     const tg = window.Telegram.WebApp;
@@ -244,7 +325,6 @@
                 document.getElementById('ref-reward-amt').innerText = (appState.settings.perRefReward || 5).toFixed(2);
                 document.getElementById('ref-link').value = (appState.settings.botLink || "https://t.me/YourBotName_bot?startapp=") + tgUser.id;
                 
-                // উইথড্র টার্গেট চেক
                 const reqRef = appState.settings.minRefWithdraw || 0;
                 const wReqMsg = document.getElementById('w-req-msg');
                 if(reqRef > 0) {
@@ -306,10 +386,29 @@
             let h =[]; snap.forEach(c => h.push(c.val())); appState.history = h.reverse(); renderHistory();
         });
 
-        db.ref('users').orderByChild('referrals').limitToLast(20).on('value', snap => {
-            let l =[]; snap.forEach(c => l.push(c.val())); appState.leaderboard = l.reverse(); renderLeaderboard();
+        // ===================== লিডারবোর্ড ঠিক করা হয়েছে =====================
+        // referrals অনুযায়ী সব ইউজার আনব (descending order)
+        db.ref('users').orderByChild('referrals').on('value', snap => {
+            let users = [];
+            snap.forEach(child => {
+                let user = child.val();
+                if(user && user.id) {
+                    users.push({
+                        id: user.id,
+                        firstName: user.firstName || "User",
+                        photoUrl: user.photoUrl || 'https://via.placeholder.com/50',
+                        referrals: user.referrals || 0
+                    });
+                }
+            });
+            // কম থেকে বেশি সাজানো হয়েছে, আমরা উল্টে দেব
+            users.sort((a, b) => b.referrals - a.referrals);
+            // শুধু টপ ২০
+            appState.leaderboard = users.slice(0, 20);
+            renderLeaderboard();
         });
-
+        // ===================================================================
+        
         setTimeout(() => { document.getElementById('loader').style.display = 'none'; document.getElementById('app').style.display = 'block'; }, 1000);
     };
 
@@ -415,7 +514,6 @@
         toast(`আলহামদুলিল্লাহ! +${reward} ৳ সালামি পেয়েছেন! 🌙`);
     }
 
-    // উইথড্র টার্গেট চেক এবং রিকোয়েস্ট ফিক্স
     function requestWithdraw() {
         const min = appState.settings.minWithdraw || 50; 
         const reqRef = appState.settings.minRefWithdraw || 0; 
@@ -423,7 +521,6 @@
         const amt = parseFloat(amtInput);
         const acc = document.getElementById('w-acc').value;
 
-        // নতুন রেফার টার্গেট চেক
         if(appState.user.referrals < reqRef) { toast(`টাকা তুলতে সর্বনিম্ন ${reqRef} টি রেফার প্রয়োজন ⚠️`); return; }
 
         if(!acc || acc.trim() === '') { toast("একাউন্ট নাম্বার দিন ⚠️"); return; }
@@ -449,14 +546,91 @@
         });
     }
 
+    // ===================== লিডারবোর্ড রেন্ডার ফাংশন সম্পূর্ণ ঠিক করা =====================
     function renderLeaderboard() {
-        const p = document.getElementById('podium-area'); const l = document.getElementById('lb-area');
-        p.innerHTML = ''; l.innerHTML = ''; const top = appState.leaderboard; if(top.length === 0) return;
-        if(top[1]) p.innerHTML += getPodium(top[1], 2); if(top[0]) p.innerHTML += getPodium(top[0], 1); if(top[2]) p.innerHTML += getPodium(top[2], 3);
-        for(let i=3; i<top.length; i++) { l.innerHTML += `<div class="lb-item"><span class="lb-rank">#${i+1}</span><img src="${top[i].photoUrl||'https://via.placeholder.com/40'}" class="lb-img"><div class="lb-name">${top[i].firstName}</div><div class="lb-val">${top[i].referrals}</div></div>`; }
+        const podiumDiv = document.getElementById('podium-area');
+        const listDiv = document.getElementById('lb-area');
+        
+        if(!podiumDiv || !listDiv) return;
+        
+        podiumDiv.innerHTML = '';
+        listDiv.innerHTML = '';
+        
+        const topUsers = appState.leaderboard;
+        
+        if(topUsers.length === 0) {
+            podiumDiv.innerHTML = '<div class="no-data">কোনো ব্যবহারকারী নেই 🌙</div>';
+            listDiv.innerHTML = '<div class="no-data">লিডারবোর্ড শূন্য</div>';
+            return;
+        }
+        
+        // শীর্ষ ৩ টি আলাদা করে নেওয়া
+        const first = topUsers[0];
+        const second = topUsers[1];
+        const third = topUsers[2];
+        
+        // পোডিয়াম সাজানো (২,১,৩ ক্রমে)
+        const podiumOrder = [];
+        if(second) podiumOrder.push({ user: second, rank: 2 });
+        if(first) podiumOrder.push({ user: first, rank: 1 });
+        if(third) podiumOrder.push({ user: third, rank: 3 });
+        
+        podiumOrder.forEach(item => {
+            const user = item.user;
+            const rank = item.rank;
+            let crownIcon = '';
+            if(rank === 1) crownIcon = '<i class="fas fa-crown"></i>';
+            else if(rank === 2) crownIcon = '<i class="fas fa-crown"></i>';
+            else if(rank === 3) crownIcon = '<i class="fas fa-crown"></i>';
+            
+            let rankColor = '';
+            if(rank === 1) rankColor = 'var(--gold)';
+            else if(rank === 2) rankColor = 'var(--silver)';
+            else rankColor = 'var(--bronze)';
+            
+            const podiumHtml = `
+                <div class="podium-item rank-${rank}">
+                    <div class="crown">${crownIcon}</div>
+                    <img src="${user.photoUrl || 'https://via.placeholder.com/65'}" class="podium-img" style="border-color: ${rankColor}">
+                    <div class="podium-name">${escapeHtml(user.firstName)}</div>
+                    <div class="podium-score">${user.referrals} জন</div>
+                </div>
+            `;
+            podiumDiv.innerHTML += podiumHtml;
+        });
+        
+        // বাকি ৪-২০ তম স্থান
+        const remainingUsers = topUsers.slice(3);
+        
+        if(remainingUsers.length === 0 && topUsers.length <= 3) {
+            listDiv.innerHTML = '<div class="no-data">আরও ব্যবহারকারী নেই</div>';
+        } else {
+            remainingUsers.forEach((user, idx) => {
+                const rank = idx + 4;
+                const listHtml = `
+                    <div class="lb-item">
+                        <span class="lb-rank">#${rank}</span>
+                        <img src="${user.photoUrl || 'https://via.placeholder.com/40'}" class="lb-img" onerror="this.src='https://via.placeholder.com/40'">
+                        <div class="lb-name">${escapeHtml(user.firstName)}</div>
+                        <div class="lb-val">${user.referrals}</div>
+                    </div>
+                `;
+                listDiv.innerHTML += listHtml;
+            });
+        }
     }
-    function getPodium(u, r) { const rankColors = {1: 'var(--gold)', 2: 'var(--silver)', 3: 'var(--bronze)'}; return `<div class="podium-item rank-${r}"><div class="crown"><i class="fas fa-crown"></i></div><img src="${u.photoUrl||'https://via.placeholder.com/60'}" class="podium-img" style="border-color:${rankColors[r]}"><div class="podium-name">${u.firstName}</div><div class="podium-score">${u.referrals} জন</div></div>`; }
+    // ===================================================================
     
+    function escapeHtml(str) {
+        if(!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if(m === '&') return '&amp;';
+            if(m === '<') return '&lt;';
+            if(m === '>') return '&gt;';
+            return m;
+        });
+    }
+
     function renderHistory() {
         const el = document.getElementById('hist-area'); el.innerHTML = '';
         if(appState.history.length === 0) { el.innerHTML='<p style="text-align:center;color:#aaa">কোনো লেনদেন নেই</p>'; return; }
