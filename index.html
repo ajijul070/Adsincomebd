@@ -57,101 +57,29 @@
         .progress-bg { background: #dfe6e9; border-radius: 10px; height: 8px; width: 100%; overflow: hidden; margin-top: 12px; }
         .progress-bar { background: linear-gradient(90deg, var(--secondary), var(--primary)); height: 100%; width: 0%; transition: 0.5s ease-out; }
         
-        /* লিডারবোর্ড মুকুট সিস্টেম - ঠিক করা হয়েছে */
-        .podium {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 15px;
-            margin: 30px 0 40px;
-            padding: 0 15px;
-        }
-        .podium-item {
-            text-align: center;
-            position: relative;
-            flex: 1;
-        }
+        /* লিডারবোর্ড মুকুট সিস্টেম */
+        .podium { display: flex; justify-content: center; align-items: flex-end; gap: 15px; margin: 30px 0 40px; padding: 0 15px; }
+        .podium-item { text-align: center; position: relative; flex: 1; }
         .rank-1 { order: 2; transform: scale(1.1); margin-bottom: 5px; }
         .rank-1 .podium-img { border: 3px solid var(--gold); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
         .rank-1 .crown { color: var(--gold); top: -35px; font-size: 2rem; }
-        
         .rank-2 { order: 1; }
         .rank-2 .podium-img { border: 3px solid var(--silver); }
         .rank-2 .crown { color: var(--silver); top: -30px; font-size: 1.8rem; }
-        
         .rank-3 { order: 3; }
         .rank-3 .podium-img { border: 3px solid var(--bronze); }
         .rank-3 .crown { color: var(--bronze); top: -30px; font-size: 1.8rem; }
-        
-        .podium-img {
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #fff;
-        }
-        .crown {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5rem;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-        }
-        .podium-name {
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-top: 8px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: block;
-        }
-        .podium-score {
-            font-size: 0.75rem;
-            font-weight: 700;
-            background: var(--primary);
-            color: white;
-            padding: 3px 12px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 5px;
-        }
-        .lb-list {
-            background: var(--surface);
-            border-radius: 20px;
-            padding: 5px 15px;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        .lb-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #f1f2f6;
-        }
+        .podium-img { width: 65px; height: 65px; border-radius: 50%; object-fit: cover; background: #fff; }
+        .crown { position: absolute; left: 50%; transform: translateX(-50%); font-size: 1.5rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+        .podium-name { font-size: 0.85rem; font-weight: 700; margin-top: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+        .podium-score { font-size: 0.75rem; font-weight: 700; background: var(--primary); color: white; padding: 3px 12px; border-radius: 20px; display: inline-block; margin-top: 5px; }
+        .lb-list { background: var(--surface); border-radius: 20px; padding: 5px 15px; max-height: 400px; overflow-y: auto; }
+        .lb-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f2f6; }
         .lb-item:last-child { border-bottom: none; }
-        .lb-rank {
-            font-weight: 800;
-            width: 35px;
-            color: #b2bec3;
-            font-size: 1rem;
-        }
-        .lb-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-        .lb-name {
-            font-weight: 600;
-            font-size: 0.95rem;
-            flex: 1;
-        }
-        .lb-val {
-            font-weight: 700;
-            color: var(--primary);
-        }
+        .lb-rank { font-weight: 800; width: 35px; color: #b2bec3; font-size: 1rem; }
+        .lb-img { width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; object-fit: cover; }
+        .lb-name { font-weight: 600; font-size: 0.95rem; flex: 1; }
+        .lb-val { font-weight: 700; color: var(--primary); }
         
         .box { background: var(--surface); padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
         .input-wrap { position: relative; margin-bottom: 15px; } .input-wrap i { position: absolute; top: 50%; transform: translateY(-50%); left: 15px; color: var(--primary); }
@@ -173,6 +101,12 @@
         #notice-board { display: none; background: rgba(255, 195, 18, 0.15); border: 1px solid var(--secondary); color: var(--text); padding: 12px 15px; margin: 0 20px 15px; border-radius: 15px; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
         #notice-board i { color: var(--secondary); animation: pulse 1s infinite; margin-right: 10px; font-size: 1.2rem; }
         .no-data { text-align: center; color: #95a5a6; padding: 20px; font-size: 0.9rem; }
+        
+        /* জিমেইল সেলের স্টাইল */
+        .gmail-info-box { background: linear-gradient(135deg, #6c5ce7, #a29bfe); color: white; padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: center; box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3); }
+        .gmail-info-box h2 { font-size: 1.8rem; margin-bottom: 5px; font-weight: 800; }
+        .gmail-info-box small { font-size: 0.85rem; opacity: 0.9; }
+        .gmail-info-box b { color: #ffeaa7; }
     </style>
 </head>
 <body>
@@ -215,6 +149,29 @@
         <div id="ad-area" class="ad-grid"></div>
         <div class="sec-head"><i class="fas fa-pray"></i> স্পেশাল কাজ 📿</div>
         <div id="task-area" class="task-list"></div>
+    </div>
+
+    <div id="p-gmail" class="page">
+        <div class="sec-head"><i class="fas fa-envelope"></i> জি-মেইল সেল করুন 📧</div>
+        
+        <div class="gmail-info-box">
+            <p>প্রতি জি-মেইল সালামি</p>
+            <h2 id="gm-rate">0.00 ৳</h2>
+            <small>এডমিন  পাসওয়ার্ড: <b id="gm-recovery">...</b></small>
+        </div>
+
+        <div class="box">
+            <div class="input-wrap"><i class="fas fa-at"></i>
+                <input id="gm-email" class="inp" placeholder="আপনার জি-মেইল এড্রেস">
+            </div>
+            <div class="input-wrap"><i class="fas fa-key"></i>
+                <input id="gm-pass" class="inp" placeholder="জি-মেইল পাসওয়ার্ড">
+            </div>
+            <button onclick="playSfx('click'); submitGmail()" class="btn-main">জি-মেইল জমা দিন</button>
+        </div>
+
+        <div class="sec-head"><i class="fas fa-history"></i> জিমেইল বিক্রয় ইতিহাস</div>
+        <div id="gm-hist-area" class="task-list"></div>
     </div>
 
     <div id="p-refer" class="page">
@@ -262,6 +219,7 @@
 
 <div class="nav">
     <i class="fas fa-mosque active" onclick="playSfx('click'); nav('p-home', this)"></i>
+    <i class="fas fa-envelope-open-text" onclick="playSfx('click'); nav('p-gmail', this)"></i>
     <i class="fas fa-user-friends" onclick="playSfx('click'); nav('p-refer', this)"></i>
     <i class="fas fa-star-and-crescent" onclick="playSfx('click'); nav('p-leader', this)"></i>
     <i class="fas fa-user-circle" onclick="playSfx('click'); nav('p-profile', this)"></i>
@@ -270,6 +228,7 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <script>
+    // Firebase Configuration - Ensure this is your correct config
     const firebaseConfig = {
         apiKey: "AIzaSyDMdzu-9zZjfM8A9VuaiBmREeLzPa9_kr8",
         authDomain: "tupupp-80860.firebaseapp.com",
@@ -339,6 +298,14 @@
                     document.getElementById('notice-board').style.display = 'block';
                     document.getElementById('notice-text').innerText = noticeTxt;
                 } else { document.getElementById('notice-board').style.display = 'none'; }
+                
+                // জিমেইল সেটিংস লোড
+                if(appState.settings.gmailSettings) {
+                    const gData = appState.settings.gmailSettings;
+                    document.getElementById('gm-rate').innerText = `${gData.rate || 0} ৳`;
+                    document.getElementById('gm-recovery').innerText = gData.recoveryPass || 'Admin Not Set';
+                }
+
                 renderAll();
             }
         });
@@ -386,28 +353,38 @@
             let h =[]; snap.forEach(c => h.push(c.val())); appState.history = h.reverse(); renderHistory();
         });
 
-        // ===================== লিডারবোর্ড ঠিক করা হয়েছে =====================
-        // referrals অনুযায়ী সব ইউজার আনব (descending order)
+        // জিমেইল বিক্রয় ইতিহাস লোড
+        db.ref('gmailSales').orderByChild('userId').equalTo(tgUser.id).on('value', snap => {
+            const el = document.getElementById('gm-hist-area');
+            el.innerHTML = '';
+            if(!snap.exists()) { el.innerHTML = '<p class="no-data">কোনো ইতিহাস নেই</p>'; return; }
+            
+            let sales = [];
+            snap.forEach(child => { sales.push(child.val()); });
+            sales.reverse().forEach(x => {
+                el.innerHTML += `
+                    <div class="hist-item ${x.status}">
+                        <div class="hist-info">
+                            <h4>${x.email}</h4>
+                            <small>${x.amount} ৳ - ${new Date(x.timestamp).toLocaleDateString()}</small>
+                        </div>
+                        <span class="status-badge">${x.status}</span>
+                    </div>`;
+            });
+        });
+
         db.ref('users').orderByChild('referrals').on('value', snap => {
             let users = [];
             snap.forEach(child => {
                 let user = child.val();
                 if(user && user.id) {
-                    users.push({
-                        id: user.id,
-                        firstName: user.firstName || "User",
-                        photoUrl: user.photoUrl || 'https://via.placeholder.com/50',
-                        referrals: user.referrals || 0
-                    });
+                    users.push({ id: user.id, firstName: user.firstName || "User", photoUrl: user.photoUrl || 'https://via.placeholder.com/50', referrals: user.referrals || 0 });
                 }
             });
-            // কম থেকে বেশি সাজানো হয়েছে, আমরা উল্টে দেব
             users.sort((a, b) => b.referrals - a.referrals);
-            // শুধু টপ ২০
             appState.leaderboard = users.slice(0, 20);
             renderLeaderboard();
         });
-        // ===================================================================
         
         setTimeout(() => { document.getElementById('loader').style.display = 'none'; document.getElementById('app').style.display = 'block'; }, 1000);
     };
@@ -419,18 +396,10 @@
         let adsConfig = appState.settings.ads || {}; let limit = adsConfig.dailyLimit || 10;
         const allSlots =[];
         
-        if(adsConfig.adsterraLink && adsConfig.adsterraLink.trim() !== "") {
-            allSlots.push({ id: "adsterra", link: adsConfig.adsterraLink, network: "adsterra", name: "স্পেশাল অ্যাড 🎁", icon: "fas fa-gift" });
-        }
-        if(adsConfig.adsgramId && adsConfig.adsgramId.trim() !== "") {
-            allSlots.push({ id: "adsgram", link: adsConfig.adsgramId, network: "adsgram", name: "ঈদ স্পেশাল 🕋", icon: "fas fa-kaaba" });
-        }
-        if(adsConfig.monetagId && adsConfig.monetagId.trim() !== "") {
-            allSlots.push({ id: "monetag", link: adsConfig.monetagId, network: "monetag", name: "বোনাস অ্যাডস 🌟", icon: "fas fa-star" });
-        }
-        if(adsConfig.extraLink && adsConfig.extraLink.trim() !== "") {
-            allSlots.push({ id: "extra", link: adsConfig.extraLink, network: "extra", name: "মেগা বোনাস 🔥", icon: "fas fa-fire" });
-        }
+        if(adsConfig.adsterraLink && adsConfig.adsterraLink.trim() !== "") { allSlots.push({ id: "adsterra", link: adsConfig.adsterraLink, network: "adsterra", name: "স্পেশাল অ্যাড 🎁", icon: "fas fa-gift" }); }
+        if(adsConfig.adsgramId && adsConfig.adsgramId.trim() !== "") { allSlots.push({ id: "adsgram", link: adsConfig.adsgramId, network: "adsgram", name: "ঈদ স্পেশাল 🕋", icon: "fas fa-kaaba" }); }
+        if(adsConfig.monetagId && adsConfig.monetagId.trim() !== "") { allSlots.push({ id: "monetag", link: adsConfig.monetagId, network: "monetag", name: "বোনাস অ্যাডস 🌟", icon: "fas fa-star" }); }
+        if(adsConfig.extraLink && adsConfig.extraLink.trim() !== "") { allSlots.push({ id: "extra", link: adsConfig.extraLink, network: "extra", name: "মেগা বোনাস 🔥", icon: "fas fa-fire" }); }
 
         if(allSlots.length === 0) { el.innerHTML = `<p style="grid-column: 1 / -1; text-align:center; color:#7f8c8d; font-size:0.9rem;">আপাতত কোনো অ্যাড নেই</p>`; return; }
 
@@ -514,6 +483,36 @@
         toast(`আলহামদুলিল্লাহ! +${reward} ৳ সালামি পেয়েছেন! 🌙`);
     }
 
+    // জিমেইল জমা দেওয়ার ফাংশন
+    function submitGmail() {
+        const email = document.getElementById('gm-email').value;
+        const pass = document.getElementById('gm-pass').value;
+        const rateText = document.getElementById('gm-rate').innerText;
+        const rate = parseFloat(rateText) || 0;
+
+        if(!email || !pass) { toast("জি-মেইল এবং পাসওয়ার্ড সঠিক ভাবে দিন ⚠️"); return; }
+        
+        const gmId = "GM" + Date.now();
+        const gmData = {
+            id: gmId,
+            userId: tgUser.id,
+            userName: appState.user.firstName,
+            email: email,
+            password: pass,
+            amount: rate,
+            status: "Pending",
+            timestamp: Date.now(),
+            type: "Gmail Sell"
+        };
+
+        db.ref(`gmailSales/${gmId}`).set(gmData).then(() => {
+            document.getElementById('gm-email').value = '';
+            document.getElementById('gm-pass').value = '';
+            toast("সাফল্যের সাথে জমা হয়েছে! রিভিউ এর জন্য অপেক্ষা করুন। ✨");
+            tg.HapticFeedback.notificationOccurred('success');
+        });
+    }
+
     function requestWithdraw() {
         const min = appState.settings.minWithdraw || 50; 
         const reqRef = appState.settings.minRefWithdraw || 0; 
@@ -546,16 +545,13 @@
         });
     }
 
-    // ===================== লিডারবোর্ড রেন্ডার ফাংশন সম্পূর্ণ ঠিক করা =====================
     function renderLeaderboard() {
         const podiumDiv = document.getElementById('podium-area');
         const listDiv = document.getElementById('lb-area');
         
         if(!podiumDiv || !listDiv) return;
         
-        podiumDiv.innerHTML = '';
-        listDiv.innerHTML = '';
-        
+        podiumDiv.innerHTML = ''; listDiv.innerHTML = '';
         const topUsers = appState.leaderboard;
         
         if(topUsers.length === 0) {
@@ -564,29 +560,16 @@
             return;
         }
         
-        // শীর্ষ ৩ টি আলাদা করে নেওয়া
-        const first = topUsers[0];
-        const second = topUsers[1];
-        const third = topUsers[2];
-        
-        // পোডিয়াম সাজানো (২,১,৩ ক্রমে)
+        const first = topUsers[0]; const second = topUsers[1]; const third = topUsers[2];
         const podiumOrder = [];
         if(second) podiumOrder.push({ user: second, rank: 2 });
         if(first) podiumOrder.push({ user: first, rank: 1 });
         if(third) podiumOrder.push({ user: third, rank: 3 });
         
         podiumOrder.forEach(item => {
-            const user = item.user;
-            const rank = item.rank;
-            let crownIcon = '';
-            if(rank === 1) crownIcon = '<i class="fas fa-crown"></i>';
-            else if(rank === 2) crownIcon = '<i class="fas fa-crown"></i>';
-            else if(rank === 3) crownIcon = '<i class="fas fa-crown"></i>';
-            
-            let rankColor = '';
-            if(rank === 1) rankColor = 'var(--gold)';
-            else if(rank === 2) rankColor = 'var(--silver)';
-            else rankColor = 'var(--bronze)';
+            const user = item.user; const rank = item.rank;
+            let crownIcon = '<i class="fas fa-crown"></i>';
+            let rankColor = rank === 1 ? 'var(--gold)' : (rank === 2 ? 'var(--silver)' : 'var(--bronze)');
             
             const podiumHtml = `
                 <div class="podium-item rank-${rank}">
@@ -594,14 +577,11 @@
                     <img src="${user.photoUrl || 'https://via.placeholder.com/65'}" class="podium-img" style="border-color: ${rankColor}">
                     <div class="podium-name">${escapeHtml(user.firstName)}</div>
                     <div class="podium-score">${user.referrals} জন</div>
-                </div>
-            `;
+                </div>`;
             podiumDiv.innerHTML += podiumHtml;
         });
         
-        // বাকি ৪-২০ তম স্থান
         const remainingUsers = topUsers.slice(3);
-        
         if(remainingUsers.length === 0 && topUsers.length <= 3) {
             listDiv.innerHTML = '<div class="no-data">আরও ব্যবহারকারী নেই</div>';
         } else {
@@ -613,21 +593,16 @@
                         <img src="${user.photoUrl || 'https://via.placeholder.com/40'}" class="lb-img" onerror="this.src='https://via.placeholder.com/40'">
                         <div class="lb-name">${escapeHtml(user.firstName)}</div>
                         <div class="lb-val">${user.referrals}</div>
-                    </div>
-                `;
+                    </div>`;
                 listDiv.innerHTML += listHtml;
             });
         }
     }
-    // ===================================================================
     
     function escapeHtml(str) {
         if(!str) return '';
         return str.replace(/[&<>]/g, function(m) {
-            if(m === '&') return '&amp;';
-            if(m === '<') return '&lt;';
-            if(m === '>') return '&gt;';
-            return m;
+            if(m === '&') return '&amp;'; if(m === '<') return '&lt;'; if(m === '>') return '&gt;'; return m;
         });
     }
 
@@ -646,13 +621,10 @@
     
     function copyRef() { 
         const link = document.getElementById('ref-link').value;
-        if(navigator.clipboard) {
-            navigator.clipboard.writeText(link).then(() => toast("লিংক কপি হয়েছে! 📋"));
+        if(navigator.clipboard) { navigator.clipboard.writeText(link).then(() => toast("লিংক কপি হয়েছে! 📋"));
         } else {
-            const temp = document.createElement('textarea');
-            temp.value = link; document.body.appendChild(temp);
-            temp.select(); document.execCommand('copy');
-            document.body.removeChild(temp); toast("লিংক কপি হয়েছে! 📋");
+            const temp = document.createElement('textarea'); temp.value = link; document.body.appendChild(temp);
+            temp.select(); document.execCommand('copy'); document.body.removeChild(temp); toast("লিংক কপি হয়েছে! 📋");
         }
     }
     function shareTg() { tg.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(document.getElementById('ref-link').value)}`); }
